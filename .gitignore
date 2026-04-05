@@ -1,0 +1,34 @@
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env                    # Never commit real API keys
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyw
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environment ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Generated / large data artifacts ─────────────────────────────────────────
+# ChromaDB vector index (rebuilt by pdf_ingestion.py)
+data/chroma/
+# SQLite database (rebuilt by seed_database.py)
+data/db/
+# User-supplied PDFs – not versioned, add your own
+data/pdfs/
+
+# ── HuggingFace model cache ───────────────────────────────────────────────────
+.cache/
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
