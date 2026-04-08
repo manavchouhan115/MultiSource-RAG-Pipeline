@@ -165,7 +165,9 @@ def generate_answer(
         "sources": sources,
         "sql_used": sql_used,
         "route": route.value if hasattr(route, 'value') else str(route),
-        "chunks_used": chunks_used
+        "chunks_used": chunks_used,
+        "chunks": rag_chunks,
+        "sql_data": sql_result
     }
 
 def answer_question(question: str) -> dict:
